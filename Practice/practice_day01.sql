@@ -1,0 +1,28 @@
+-- Day 1 SQL Practice
+
+-- CREATE DATABASE
+CREATE DATABASE Campus;
+
+-- CREATE TABLE
+CREATE TABLE users (
+    user_id INTEGER,
+    name VARCHAR(255),
+    email VARCHAR(255),
+    password VARCHAR(255)
+);
+
+-- SELECT
+SELECT * FROM users;
+
+-- DELETE
+DELETE FROM users
+WHERE user_id = 1;
+
+-- TRUNCATE
+TRUNCATE TABLE users;
+
+-- DROP TABLE
+DROP TABLE users;
+
+-- DROP DATABASE
+DROP DATABASE Campus;
