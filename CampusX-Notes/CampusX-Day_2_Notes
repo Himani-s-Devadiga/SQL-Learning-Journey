@@ -1,0 +1,31 @@
+/*
+==========================================
+SQL Constraints Notes
+==========================================
+*/
+
+-- PRIMARY KEY
+-- Uniquely identifies each row.
+-- Cannot contain NULL values.
+-- Only one PRIMARY KEY is allowed per table.
+
+-- NOT NULL
+-- Ensures a column cannot have NULL values.
+
+-- CHECK
+-- Restricts values based on a condition.
+
+-- UNIQUE
+-- Prevents duplicate values in a column.
+
+-- DEFAULT
+-- Assigns a default value if no value is provided.
+
+-- AUTO_INCREMENT
+-- Automatically generates sequential values.
+-- Commonly used with PRIMARY KEY.
+
+-- FOREIGN KEY
+-- Creates a relationship between two tables.
+-- The value in the child table must exist
+-- in the parent table.
