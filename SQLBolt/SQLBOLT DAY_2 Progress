@@ -1,0 +1,40 @@
+/*
+==========================================
+SQLBolt - Lesson 3
+Queries with Constraints (Part 2)
+Completed on: 26 June 2026
+==========================================
+*/
+
+-- Find all the Toy Story movies
+
+SELECT *
+FROM movies
+WHERE title LIKE 'Toy Story%';
+
+-- Find all the movies directed by John Lasseter
+
+SELECT *
+FROM movies
+WHERE director = 'John Lasseter';
+
+-- Find all the movies (and director) not directed by John Lasseter
+
+SELECT title, director
+FROM movies
+WHERE director != 'John Lasseter';
+
+-- Find all the WALL-* movies
+
+SELECT *
+FROM movies
+WHERE title LIKE 'WALL-%';
+
+-- Concepts Learned:
+-- =            : Exact match
+-- != or <>     : Not equal to
+-- LIKE         : Pattern matching
+-- %            : Matches zero or more characters
+-- _            : Matches exactly one character
+-- IN           : Matches any value from a list
+-- NOT IN       : Excludes values from a list
