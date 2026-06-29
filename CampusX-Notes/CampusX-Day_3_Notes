@@ -1,0 +1,88 @@
+🔁 1. Referential Actions (FOREIGN KEY Behavior)
+
+Used when referenced (parent) record is updated or deleted.
+
+🔥 ON DELETE CASCADE
+If parent row is deleted → child rows are deleted automatically
+FOREIGN KEY (student_id)
+REFERENCES students(id)
+ON DELETE CASCADE;
+🔥 ON UPDATE CASCADE
+If parent key changes → child updates automatically
+ON UPDATE CASCADE;
+🔥 SET NULL
+If parent is deleted → child value becomes NULL
+ON DELETE SET NULL;
+🔥 SET DEFAULT
+If parent is deleted → child gets default value
+ON DELETE SET DEFAULT;
+🔥 RESTRICT
+Prevents delete/update if child exists
+ON DELETE RESTRICT;
+🏗️ 3. ALTER TABLE COMMANDS
+-> Used to modify existing table structure.
+
+➕ ADD COLUMN
+ALTER TABLE students
+ADD age INT;
+
+➕ ADD MULTIPLE COLUMNS
+ALTER TABLE students
+ADD (address VARCHAR(100), phone VARCHAR(15));
+
+✏️ MODIFY COLUMN (change datatype / size)
+ALTER TABLE students
+MODIFY age VARCHAR(3);
+
+❌ DROP COLUMN
+ALTER TABLE students
+DROP COLUMN age;
+
+🔁 RENAME COLUMN
+ALTER TABLE students
+RENAME COLUMN name TO student_name;
+
+📍 ADD COLUMN AT SPECIFIC POSITION
+
+(MySQL example)
+
+ALTER TABLE students
+ADD gender VARCHAR(10) AFTER name;
+
+or
+
+ALTER TABLE students
+ADD id INT FIRST;
+🔒 4. ALTER CONSTRAINTS
+
+➕ ADD CONSTRAINT
+ALTER TABLE students
+ADD CONSTRAINT chk_age CHECK (age >= 18);
+
+❌ DROP CONSTRAINT
+ALTER TABLE students
+DROP CONSTRAINT chk_age;
+
+🔁 MODIFY CONSTRAINT (method depends on DB)
+Usually done by:
+DROP + ADD again
+Example:
+ALTER TABLE students
+DROP CONSTRAINT chk_age;
+
+ALTER TABLE students
+ADD CONSTRAINT chk_age CHECK (age >= 21);
+
+🧠 5. KEY TAKEAWAYS
+Constraints ensure data correctness
+Referential actions maintain relationship integrity
+ALTER TABLE is used for schema evolution
+CASCADE is powerful but should be used carefully
+SET NULL is useful for optional relationships
+
+🚀 6. REAL-WORLD THINKING
+In real systems:
+CASCADE → used in orders, cart, user-data relations
+RESTRICT → used in financial systems (safety critical)
+SET NULL → used in optional relationships like profile info
+ALTER TABLE → used in production schema upgrades
