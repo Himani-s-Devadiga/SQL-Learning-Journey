@@ -1,0 +1,220 @@
+# CampusX SQL - Day 4 Notes
+
+## Topics Covered
+
+### 1. DML (Data Manipulation Language)
+
+DML is used to manipulate the data stored inside a table.
+
+Commands:
+
+* INSERT
+* UPDATE
+* DELETE
+
+---
+
+## 2. Mathematical Expressions
+
+SQL supports arithmetic operations on numeric columns.
+
+Operators:
+
+* `+` Addition
+* `-` Subtraction
+* `*` Multiplication
+* `/` Division
+* `%` Modulus
+
+Example:
+
+```sql
+SELECT name, marks + 5 AS new_marks
+FROM students;
+```
+
+---
+
+## 3. Constants
+
+A constant is a fixed value that appears in every row of the output.
+
+Example:
+
+```sql
+SELECT name, 'Student' AS Role
+FROM students;
+```
+
+---
+
+## 4. DISTINCT
+
+The `DISTINCT` keyword removes duplicate values from the result.
+
+Example:
+
+```sql
+SELECT DISTINCT city
+FROM students;
+```
+
+---
+
+## 5. WHERE Clause
+
+The `WHERE` clause filters rows based on a condition.
+
+Example:
+
+```sql
+SELECT *
+FROM students
+WHERE marks > 80;
+```
+
+---
+
+## 6. BETWEEN
+
+`BETWEEN` is used to select values within a specified range.
+
+Example:
+
+```sql
+SELECT *
+FROM students
+WHERE marks BETWEEN 80 AND 90;
+```
+
+---
+
+## 7. AND Operator
+
+The `AND` operator returns rows only when all specified conditions are true.
+
+Example:
+
+```sql
+SELECT *
+FROM students
+WHERE city = 'Bangalore'
+AND marks > 85;
+```
+
+---
+
+## 8. IN Operator
+
+`IN` checks whether a value matches any value in a given list.
+
+Example:
+
+```sql
+SELECT *
+FROM students
+WHERE city IN ('Bangalore', 'Mangalore');
+```
+
+---
+
+## 9. NOT IN Operator
+
+`NOT IN` returns rows whose values are not present in the specified list.
+
+Example:
+
+```sql
+SELECT *
+FROM students
+WHERE city NOT IN ('Bangalore');
+```
+
+---
+
+## 10. UPDATE Statement
+
+`UPDATE` modifies existing records in a table.
+
+Example:
+
+```sql
+UPDATE students
+SET marks = 85
+WHERE id = 2;
+```
+
+---
+
+## 11. DELETE Statement
+
+`DELETE` removes rows from a table.
+
+Example:
+
+```sql
+DELETE FROM students
+WHERE id = 2;
+```
+
+---
+
+## 12. SQL Execution Order
+
+Although SQL queries are written as:
+
+```sql
+SELECT ...
+FROM ...
+WHERE ...
+```
+
+SQL executes them in the following order:
+
+1. FROM
+2. WHERE
+3. SELECT
+
+Example:
+
+```sql
+SELECT name, marks
+FROM students
+WHERE marks > 80;
+```
+
+Execution Process:
+
+* **FROM** → Selects the `students` table.
+* **WHERE** → Filters rows where `marks > 80`.
+* **SELECT** → Displays only the `name` and `marks` columns.
+
+---
+
+## Key Takeaways
+
+* DML is used to manipulate table data.
+* Mathematical expressions perform calculations inside SQL queries.
+* Constants display fixed values.
+* `DISTINCT` removes duplicate records.
+* `WHERE` filters rows based on conditions.
+* `BETWEEN` checks values within a range.
+* `AND` combines multiple conditions.
+* `IN` simplifies multiple OR conditions.
+* `NOT IN` excludes specific values.
+* `UPDATE` modifies existing records.
+* `DELETE` removes records permanently.
+* SQL executes queries in the order: **FROM → WHERE → SELECT**.
+
+---
+
+## Practice Completed
+
+* Practiced arithmetic expressions.
+* Used constants in SQL queries.
+* Removed duplicate values using `DISTINCT`.
+* Filtered records using `WHERE`.
+* Practiced `BETWEEN`, `AND`, `IN`, and `NOT IN`.
+* Updated records using `UPDATE`.
+* Deleted records using `DELETE`.
+* Understood SQL query execution order.
