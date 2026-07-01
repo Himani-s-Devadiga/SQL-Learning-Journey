@@ -22,7 +22,7 @@ This folder contains my SQL practice queries and exercises.
 - Normalization
 - SQLBolt Lesson 1 ✅
 - SQLBolt Lesson 2 ✅
-- 
+  
  ### Day 05
 - Aggregate Functions
   - MAX()
