@@ -52,14 +52,10 @@ Build strong SQL skills for **Data Science**, **Analytics**, **Machine Learning*
 
 ⭐ This repository will continue to grow as I learn new SQL concepts and build projects.
 
-✅ SQL Fundamentals
-✅ DDL Commands
-✅ DML Commands
-✅ SQL Queries
-✅ Aggregate Functions
-✅ Scalar Functions
-🔄 GROUP BY & HAVING
-⏳ JOINS
-⏳ Subqueries
-⏳ Window Functions
-⏳ SQL Projects
+## 📈 Progress Tracker
+
+- CampusX Notes: 6 Days
+- SQLBolt Lessons Completed: 6
+- Practice Files: 6
+- HackerRank Problems Solved: X
+- SQL Projects: 0 (In Progress)
