@@ -1,0 +1,53 @@
+# SQLBolt Day 4 - Filtering & Sorting
+-- Date : 2/7/2026
+
+## Topics Covered
+- DISTINCT
+- ORDER BY
+- ASC
+- DESC
+- LIMIT
+- OFFSET
+
+## Key Notes
+
+### DISTINCT
+Removes duplicate values from the result.
+
+### ORDER BY
+Sorts the result set.
+
+- ASC → Ascending order (Default)
+- DESC → Descending order
+
+### LIMIT
+Returns only the specified number of rows.
+
+### OFFSET
+Skips a specified number of rows before returning results.
+
+## Example
+
+```sql
+SELECT DISTINCT director
+FROM movies
+ORDER BY director ASC;
+```
+
+```sql
+SELECT title, year
+FROM movies
+ORDER BY year DESC
+LIMIT 4;
+```
+
+```sql
+SELECT title
+FROM movies
+ORDER BY title ASC
+LIMIT 5 OFFSET 5;
+```
+
+## Status
+
+✅ Completed
