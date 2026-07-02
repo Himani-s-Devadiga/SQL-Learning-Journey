@@ -1,0 +1,48 @@
+# SQLBolt Day 10 - Aggregate Functions
+--- Date - 2/7/2026
+
+## Topics Covered
+- COUNT()
+- SUM()
+- AVG()
+- MIN()
+- MAX()
+- GROUP BY (Introduction)
+
+## Key Notes
+
+### COUNT()
+Counts the number of rows.
+
+### SUM()
+Calculates the total of numeric values.
+
+### AVG()
+Calculates the average value.
+
+### MAX()
+Returns the highest value.
+
+### MIN()
+Returns the lowest value.
+
+### GROUP BY
+Groups rows with the same values and is commonly used with aggregate functions.
+
+## Example
+
+```sql
+SELECT Department, COUNT(*) AS TotalEmployees
+FROM Employees
+GROUP BY Department;
+```
+
+```sql
+SELECT Department, AVG(Salary) AS AverageSalary
+FROM Employees
+GROUP BY Department;
+```
+
+## Status
+
+✅ Completed
