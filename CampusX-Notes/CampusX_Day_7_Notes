@@ -1,0 +1,22 @@
+# SQL GROUP BY & Aggregate Functions
+
+## Topics Covered
+
+- GROUP BY
+- COUNT()
+- SUM()
+- AVG()
+- MIN()
+- MAX()
+
+## GROUP BY
+
+Groups rows having the same value into a single group.
+
+Syntax
+
+```sql
+SELECT column,
+AGGREGATE_FUNCTION(column)
+FROM table_name
+GROUP BY column;
