@@ -54,8 +54,9 @@ Build strong SQL skills for **Data Science**, **Analytics**, **Machine Learning*
 
 ## 📈 Progress Tracker
 
-- CampusX Notes: 6 Days
-- SQLBolt Lessons Completed: 6
-- Practice Files: 6
+- CampusX Notes: 7 Days
+- SQLBolt Lessons Completed: 7
+- Practice Files: 7
 - HackerRank Problems Solved: X
 - SQL Projects: 0 (In Progress)
+- MySQL Server Installed: ✅
