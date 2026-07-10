@@ -1,0 +1,136 @@
+-- ===================================================
+-- Smartphone SQL Project
+-- Author : Himani Devadiga
+-- Database : smartphone_project
+-- ===================================================
+
+CREATE DATABASE smartphone_project;
+
+USE smartphone_project;
+
+-- View Data
+
+SELECT *
+FROM smartphones;
+
+-- View Table Structure
+
+DESCRIBE smartphones;
+
+SHOW COLUMNS
+FROM smartphones;
+
+-- Count Records
+
+SELECT COUNT(*) AS Total_Records
+FROM smartphones;
+
+-- Count Smartphone Brands
+
+SELECT COUNT(DISTINCT smartphone_brand) AS Total_Brands
+FROM smartphones;
+
+-- View Distinct Brands
+
+SELECT DISTINCT smartphone_brand
+FROM smartphones
+ORDER BY smartphone_brand;
+
+-- Most Expensive Phone
+
+SELECT smartphone_brand,
+       model,
+       price_inr
+FROM smartphones
+ORDER BY price_inr DESC
+LIMIT 1;
+
+-- Cheapest Phone
+
+SELECT smartphone_brand,
+       model,
+       price_inr
+FROM smartphones
+ORDER BY price_inr ASC
+LIMIT 1;
+
+-- Average Price
+
+SELECT AVG(price_inr) AS Average_Price
+FROM smartphones;
+
+-- Highest Rating
+
+SELECT MAX(rating_score) AS Highest_Rating
+FROM smartphones;
+
+-- Lowest Rating
+
+SELECT MIN(rating_score) AS Lowest_Rating
+FROM smartphones;
+
+-- Phones Above ₹50,000
+
+SELECT *
+FROM smartphones
+WHERE price_inr > 50000;
+
+-- Samsung Phones
+
+SELECT *
+FROM smartphones
+WHERE smartphone_brand='Samsung';
+
+-- Phones with More Than 8GB RAM
+
+SELECT *
+FROM smartphones
+WHERE ram_gb > 8;
+
+-- Phones with Exactly 8GB RAM
+
+SELECT *
+FROM smartphones
+WHERE ram_gb = 8;
+
+-- Number of Models Per Brand
+
+SELECT smartphone_brand,
+       COUNT(*) AS Total_Models
+FROM smartphones
+GROUP BY smartphone_brand
+ORDER BY Total_Models DESC;
+
+-- Average Price Per Brand
+
+SELECT smartphone_brand,
+       ROUND(AVG(price_inr),2) AS Average_Price
+FROM smartphones
+GROUP BY smartphone_brand
+ORDER BY Average_Price DESC;
+
+-- Most Expensive Phone Price in Each Brand
+
+SELECT smartphone_brand,
+       MAX(price_inr) AS Highest_Price
+FROM smartphones
+GROUP BY smartphone_brand
+ORDER BY Highest_Price DESC;
+
+-- Top 5 Costliest Phones
+
+SELECT smartphone_brand,
+       model,
+       price_inr
+FROM smartphones
+ORDER BY price_inr DESC
+LIMIT 5;
+
+-- Lowest 5 Priced Phones
+
+SELECT smartphone_brand,
+       model,
+       price_inr
+FROM smartphones
+ORDER BY price_inr
+LIMIT 5;
