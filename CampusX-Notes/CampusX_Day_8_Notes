@@ -1,0 +1,208 @@
+# SQL Joins
+
+## Definition
+
+A JOIN is used to combine rows from two or more tables based on a related column.
+
+Common syntax:
+
+```sql
+SELECT columns
+FROM table1
+JOIN table2
+ON table1.column = table2.column;
+
+Types of Joins
+1. INNER JOIN
+
+Returns only matching records from both tables.
+
+Example:
+
+SELECT *
+FROM Students
+INNER JOIN Marks
+ON Students.Student_ID = Marks.Student_ID;
+
+2. LEFT JOIN
+
+Returns all rows from the left table and matching rows from the right table.
+
+If no match exists, NULL values are returned.
+
+3. RIGHT JOIN
+
+Returns all rows from the right table and matching rows from the left table.
+
+If no match exists, NULL values are returned.
+
+4. FULL OUTER JOIN
+
+Returns all rows from both tables.
+
+Note:
+MySQL does not support FULL OUTER JOIN directly.
+
+5. SELF JOIN
+
+A table is joined with itself.
+
+Generally used for Employee-Manager relationships.
+
+6. CROSS JOIN
+
+Returns every possible combination of rows from both tables.
+
+If Table A has 5 rows and Table B has 4 rows,
+
+Output = 20 rows.
+
+# SQL Set Operations
+
+## What are Set Operations?
+
+Set operations are used to combine the results of two or more `SELECT` statements into a single result set.
+
+Unlike JOINs, which combine **columns** from tables, set operations combine **rows** from multiple queries.
+
+---
+
+## Rules for Set Operations
+
+Before using set operations, make sure:
+
+- Both `SELECT` statements return the same number of columns.
+- The corresponding columns have compatible data types.
+- The columns are in the same order.
+
+Example:
+
+```sql
+SELECT Name
+FROM Current_Students
+
+UNION
+
+SELECT Name
+FROM Alumni;
+```
+
+---
+
+# UNION
+
+## Definition
+
+`UNION` combines the results of two `SELECT` statements and removes duplicate rows.
+
+### Syntax
+
+```sql
+SELECT Name
+FROM Current_Students
+
+UNION
+
+SELECT Name
+FROM Alumni;
+```
+
+### Example
+
+**Current_Students**
+
+| Name |
+|------|
+| Asha |
+| Rahul |
+| Priya |
+
+**Alumni**
+
+| Name |
+|------|
+| Priya |
+| Rahul |
+| Kiran |
+| Neha |
+
+### Output
+
+| Name |
+|------|
+| Asha |
+| Rahul |
+| Priya |
+| Kiran |
+| Neha |
+
+Duplicate values (`Rahul` and `Priya`) appear only once.
+
+---
+
+# UNION ALL
+
+## Definition
+
+`UNION ALL` combines the results of two `SELECT` statements and keeps duplicate rows.
+
+### Syntax
+
+```sql
+SELECT Name
+FROM Current_Students
+
+UNION ALL
+
+SELECT Name
+FROM Alumni;
+```
+
+### Output
+
+| Name |
+|------|
+| Asha |
+| Rahul |
+| Priya |
+| Priya |
+| Rahul |
+| Kiran |
+| Neha |
+
+Duplicate values are preserved.
+
+---
+
+# Difference Between UNION and UNION ALL
+
+| UNION | UNION ALL |
+|--------|-----------|
+| Removes duplicate rows | Keeps duplicate rows |
+| Returns unique records | Returns all records |
+| Slightly slower | Faster |
+| Checks for duplicates | Does not check for duplicates |
+
+---
+
+# Interview Notes
+
+### Which is faster?
+
+**UNION ALL** is faster because it simply combines the results of both queries.
+
+**UNION** is slower because SQL must compare the rows and remove duplicate records before returning the result.
+
+---
+
+## Note
+
+Some SQL databases support additional set operations such as:
+
+- INTERSECT
+- EXCEPT
+
+These operations are **not supported directly in MySQL**.
+
+They can be achieved using JOINs or subqueries, which I will learn in upcoming lessons.
+
