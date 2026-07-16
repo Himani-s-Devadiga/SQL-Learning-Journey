@@ -1,0 +1,98 @@
+# SQL Joins
+
+## What is a JOIN?
+
+A JOIN combines rows from two or more tables using a common column.
+
+---
+
+## INNER JOIN
+
+Returns only the matching rows from both tables.
+
+### Syntax
+
+```sql
+SELECT columns
+FROM table1
+INNER JOIN table2
+ON table1.column = table2.column;
+```
+
+---
+
+## LEFT JOIN
+
+Returns all rows from the left table and matching rows from the right table.
+
+If there is no match, NULL values are returned.
+
+### Syntax
+
+```sql
+SELECT columns
+FROM table1
+LEFT JOIN table2
+ON table1.column = table2.column;
+```
+
+---
+
+## Difference
+
+| INNER JOIN | LEFT JOIN |
+|------------|-----------|
+| Returns only matching rows | Returns all rows from left table |
+| Non-matching rows are excluded | Non-matching rows appear with NULL values |
+
+# NULL Values
+
+## What is NULL?
+
+NULL represents missing or unknown data in a database.
+
+It is different from:
+
+- 0
+- Empty string ('')
+- False
+
+---
+
+## IS NULL
+
+Used to find rows where a column contains NULL.
+
+```sql
+SELECT *
+FROM employees
+WHERE building IS NULL;
+```
+
+---
+
+## IS NOT NULL
+
+Used to find rows where a column has a value.
+
+```sql
+SELECT *
+FROM employees
+WHERE building IS NOT NULL;
+```
+
+---
+
+## Important
+
+Incorrect:
+
+```sql
+WHERE building = NULL;
+```
+
+Correct:
+
+```sql
+WHERE building IS NULL;
+```
