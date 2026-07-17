@@ -1,0 +1,4 @@
+
+|3|Select All|SELECT *|
+SELECT *
+FROM CITY;
