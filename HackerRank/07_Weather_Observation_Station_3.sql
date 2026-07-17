@@ -1,0 +1,4 @@
+|7|Weather Observation Station 3|DISTINCT|
+SELECT DISTINCT CITY
+FROM STATION
+WHERE ID % 2 = 0;
