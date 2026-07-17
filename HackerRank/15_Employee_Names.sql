@@ -1,0 +1,4 @@
+|15|Employee Names|ORDER BY|
+SELECT NAME
+FROM Employee
+ORDER BY NAME;
