@@ -24,7 +24,7 @@ This repository contains my solutions to HackerRank SQL practice problems. I am 
 - ✅ Basic Select
 - 🔄 Advanced Select (In Progress)
 - ⏳ Aggregation
-- ⏳ Basic Joins
+- ✅ Basic Joins
 - ⏳ Advanced Joins
 - ⏳ Subqueries
 - ⏳ Alternative Queries
