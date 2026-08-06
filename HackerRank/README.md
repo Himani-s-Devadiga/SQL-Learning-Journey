@@ -1,36 +1,54 @@
-# HackerRank SQL Practice
+# 💻 HackerRank SQL Practice
 
-This folder contains my HackerRank SQL solutions.
+This folder contains my SQL solutions for HackerRank challenges. I am solving these problems to strengthen my SQL fundamentals, improve problem-solving skills, and prepare for Data Analyst and Data Science interviews.
 
-# HackerRank SQL Solutions
-
-This repository contains my solutions to HackerRank SQL practice problems. I am using these challenges to strengthen my SQL skills, improve query-writing ability, and prepare for technical interviews and data-related roles.
+---
 
 ## 📚 Topics Covered
 
 - Basic SELECT Queries
-- Filtering Data using WHERE
+- Advanced SELECT Queries
+- Filtering Data (`WHERE`)
 - DISTINCT
 - ORDER BY
 - LIKE & NOT LIKE
-- Logical Operators (AND, OR)
-- Aggregate Functions
-- COUNT()
-- String Functions
+- Logical Operators (`AND`, `OR`, `IN`, `NOT IN`)
+- String Functions (`LEFT()`, `RIGHT()`, `SUBSTRING()`, `LENGTH()`)
+- Aggregate Functions (`COUNT()`, `SUM()`, `AVG()`, `MIN()`, `MAX()`)
 - Pattern Matching
+- CASE Statements
+- Basic Joins *(In Progress)*
+
+---
 
 ## 🚀 Progress
 
 - ✅ Basic Select
-- 🔄 Advanced Select (In Progress)
-- ⏳ Aggregation
-- ✅ Basic Joins
-- ⏳ Advanced Joins
-- ⏳ Subqueries
+- 🔄 Advanced Select
+- 🔄 Aggregation
+- ⏳ Basic Join
+- ⏳ Advanced Join
 - ⏳ Alternative Queries
+
+---
 
 ## 🎯 Goal
 
-To build a strong foundation in SQL through consistent HackerRank practice and document my learning journey with well-organized solutions.
+My objective is to build a strong foundation in SQL by consistently solving HackerRank challenges and maintaining a well-organized collection of solutions. This repository also serves as a record of my learning journey and technical growth.
+
 ---
-⭐ More solutions will be added as I continue solving HackerRank SQL challenges.
+
+## 🛠️ Platform
+
+- HackerRank SQL (MySQL)
+
+---
+
+## 📈 Status
+
+- ⭐⭐ HackerRank SQL
+- Continuously updating this repository with new solutions.
+
+---
+
+⭐ **More SQL solutions will be added as I continue progressing through the HackerRank SQL track.**
