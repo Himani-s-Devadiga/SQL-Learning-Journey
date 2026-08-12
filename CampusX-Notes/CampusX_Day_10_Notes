@@ -1,0 +1,504 @@
+# Session 30 — Database & DBMS
+
+## 1. What is Data?
+
+**Data** is a collection of raw facts, values, or observations that can be stored and processed.
+
+Example:
+
+```text
+Name = Himani
+Age = 21
+CGPA = 8.2
+2. What is a Database?
+
+A database is an organized collection of related data that can be stored, accessed, and managed efficiently.
+
+Example:
+
+ID	Name	Age	CGPA
+1	Himani	21	8.2
+2	Rahul	22	8.5
+
+Database = organized storage of data
+
+3. What is DBMS?
+
+DBMS (Database Management System) is software used to create, store, retrieve, update, delete, and manage data in a database.
+
+It also helps with:
+
+Data security
+Access control
+Data consistency
+Data management
+Examples
+MySQL
+Oracle Database
+PostgreSQL
+Microsoft SQL Server
+Memory
+
+Database = Storage
+
+DBMS = Manager
+
+4. CRUD Operations
+
+CRUD represents the four basic operations performed on data.
+
+Operation	Meaning	SQL Command
+C — Create	Add data	INSERT
+R — Read	Retrieve data	SELECT
+U — Update	Modify data	UPDATE
+D — Delete	Remove data	DELETE
+Examples
+INSERT INTO Students
+VALUES (101, 'Himani');
+
+SELECT *
+FROM Students;
+
+UPDATE Students
+SET Name = 'Poo'
+WHERE ID = 101;
+
+DELETE FROM Students
+WHERE ID = 101;
+
+Note: CREATE TABLE is a DDL operation. CRUD's "Create" operation is commonly performed using INSERT.
+
+5. Database vs DBMS vs RDBMS vs SQL
+Database
+
+An organized collection of data.
+
+DBMS
+
+Software used to manage a database.
+
+RDBMS
+
+A type of DBMS based on the relational model, where data is organized into tables and relationships can be established between those tables.
+
+SQL
+
+Structured Query Language used to communicate with and manipulate data in relational databases.
+
+Easy Memory
+Database → Stores data
+DBMS     → Manages data
+RDBMS    → Manages relational tables
+SQL      → Communicates with the database
+6. Relational Database
+
+A relational database organizes data into tables consisting of rows and columns and establishes relationships between tables.
+
+Example
+CUSTOMER
+Customer_ID	Name
+1	Asha
+2	Rahul
+ORDERS
+Order_ID	Customer_ID	Amount
+101	1	500
+102	1	800
+
+The tables are related through:
+
+CUSTOMER.Customer_ID
+        ↓
+ORDERS.Customer_ID
+Key idea
+
+Relational = Tables + Relationships between tables
+
+7. Types of Keys
+
+Keys are attributes used to identify records and establish relationships between tables.
+
+7.1 Super Key
+
+A Super Key is any set of one or more attributes that can uniquely identify a row.
+
+Example:
+
+Student_ID
+Student_ID + Name
+Student_ID + Name + Email
+
+All can uniquely identify a student if Student_ID is unique.
+
+Memory
+
+Super Key = Generous
+
+It can uniquely identify a row even if it contains unnecessary attributes.
+
+7.2 Candidate Key
+
+A Candidate Key is a minimal Super Key.
+
+It uniquely identifies a row without unnecessary attributes.
+
+Example:
+
+Student_ID → Unique
+Email      → Unique
+
+Both can be candidate keys.
+
+But:
+
+Student_ID + Name
+
+is not a candidate key if Student_ID alone is sufficient.
+
+Memory
+
+Candidate Key = Kanjoos
+
+Uses only the necessary attributes.
+
+7.3 Primary Key
+
+A Primary Key is the candidate key selected to uniquely identify each row in a table.
+
+Properties
+Must be unique
+Cannot contain NULL
+Identifies each row
+
+Example:
+
+Student_ID → PRIMARY KEY
+Memory
+
+Candidate = Contestant
+
+Primary = Winner
+
+7.4 Alternate Key
+
+An Alternate Key is a candidate key that was not selected as the primary key.
+
+Example:
+
+Candidate Keys:
+1. Student_ID
+2. Email
+
+Selected:
+Student_ID → Primary Key
+
+Not selected:
+Email → Alternate Key
+Memory
+
+Alternate Key = Runner-up
+
+7.5 Foreign Key
+
+A Foreign Key is a column that references a key, usually the primary key, in another table.
+
+Example:
+
+DEPARTMENT
+Dept_ID → Primary Key
+STUDENTS
+Dept_ID → Foreign Key
+
+The foreign key establishes a relationship between the two tables.
+
+Important
+
+A foreign key can contain duplicate values.
+
+Example:
+
+Student_ID	Dept_ID
+101	10
+102	20
+103	10
+
+Multiple students can belong to the same department.
+
+Memory
+
+Foreign Key = Connector
+
+7.6 Composite Key
+
+A Composite Key consists of two or more columns that together uniquely identify a row.
+
+Example:
+
+STUDENT_COURSE
+Student_ID	Course_ID	Marks
+101	501	90
+101	502	85
+102	501	88
+
+Neither Student_ID nor Course_ID is unique alone.
+
+But:
+
+Student_ID + Course_ID
+
+uniquely identifies each row.
+
+Therefore, it can form a Composite Key.
+
+Memory
+
+Composite = Combination
+
+"Alone I'm not unique. Together we are."
+
+8. Key Types — Quick Revision
+Key	Meaning
+Super Key	Unique identification, may contain extra attributes
+Candidate Key	Minimal Super Key
+Primary Key	Selected Candidate Key
+Alternate Key	Candidate Key not selected as Primary
+Foreign Key	Connects to a key in another table
+Composite Key	Multiple columns together identify a row
+Memory Story
+Super Key      → Generous
+Candidate Key  → Kanjoos
+Primary Key    → Winner
+Alternate Key  → Runner-up
+Foreign Key    → Connector
+Composite Key  → Team
+9. Cardinality
+
+Cardinality describes how many records in one table/entity can be associated with records in another.
+
+9.1 One-to-One (1:1)
+
+One record is associated with one record.
+
+Example:
+
+Person → Passport
+
+Assuming one person has one passport and one passport belongs to one person.
+
+9.2 One-to-Many (1:M)
+
+One record can be associated with many records.
+
+Example:
+
+Customer → Orders
+
+One customer can have many orders.
+
+Asha
+ ├── Order 101
+ └── Order 102
+9.3 Many-to-One (M:1)
+
+Many records are associated with one record.
+
+Example:
+
+Orders → Customer
+
+Many orders can belong to one customer.
+
+1:M and M:1 can describe the same relationship depending on the direction.
+
+9.4 Many-to-Many (M:M)
+
+Many records can be associated with many records.
+
+Example:
+
+Students ↔ Courses
+
+One student can take many courses, and one course can have many students.
+
+A relational database typically represents this using a bridge/junction table:
+
+STUDENTS
+    ↓
+STUDENT_COURSE
+    ↓
+COURSES
+Memory
+1:1 → One has one
+1:M → One has many
+M:1 → Many belong to one
+M:M → Many have many
+10. Types of Databases
+10.1 Relational Database
+
+Stores data primarily in related tables.
+
+Examples:
+
+MySQL
+Oracle
+PostgreSQL
+SQL Server
+11. NoSQL Databases
+
+NoSQL databases use non-relational data models and are often chosen for flexible schemas, scalability, or specialized workloads.
+
+Major Types
+11.1 Document Database
+
+Stores data as documents, commonly in JSON-like structures.
+
+Example:
+
+{
+  "name": "Himani",
+  "age": 21
+}
+11.2 Key-Value Database
+
+Stores data as:
+
+KEY → VALUE
+
+Example:
+
+user101 → Himani
+11.3 Graph Database
+
+Represents data using:
+
+Nodes
+Relationships/Edges
+
+Example:
+
+Himani → FRIEND_OF → Asha
+
+Useful when relationships between entities are central.
+
+11.4 Column / Wide-Column Database
+
+Organizes data around column families and is designed for certain large-scale and distributed workloads.
+
+12. Why Choose NoSQL?
+
+Companies may choose NoSQL when they need:
+
+Flexible or evolving schemas
+High scalability
+Large-scale distributed systems
+Specialized data models
+Specialized access patterns
+Important
+
+NoSQL is not automatically better than SQL.
+
+The choice depends on the application's requirements.
+
+Memory
+RDBMS:
+"Tell me the structure first."
+
+NoSQL:
+"The structure can evolve."
+13. Primary Key vs Foreign Key
+Primary Key	Foreign Key
+Uniquely identifies a row	Establishes relationship between tables
+Cannot be NULL	Can generally contain NULL unless restricted
+Must be unique	Can contain duplicates
+Identifies records in its own table	References a key in another table
+One primary-key constraint per table	A table can have multiple foreign keys
+Easy Memory
+
+Primary Key → "Who am I?"
+
+Foreign Key → "Which table am I connected to?"
+
+14. Complete Example
+CUSTOMER
+Customer_ID	Name
+1	Asha
+2	Rahul
+Customer_ID → PRIMARY KEY
+ORDERS
+Order_ID	Customer_ID	Amount
+101	1	500
+102	1	800
+103	2	300
+Order_ID    → PRIMARY KEY
+Customer_ID → FOREIGN KEY
+Relationship
+CUSTOMER 1 ───────── M ORDERS
+JOIN
+SELECT *
+FROM CUSTOMER C
+JOIN ORDERS O
+ON C.Customer_ID = O.Customer_ID;
+Why can Orders.Customer_ID repeat?
+
+Because Customer_ID is a foreign key, not the primary key of ORDERS.
+
+Order_ID uniquely identifies each order:
+
+101 → Asha's order
+102 → Asha's another order
+103 → Rahul's order
+
+Therefore:
+
+Primary Key = Unique within its table
+
+Foreign Key = Can repeat because multiple records can reference the same parent
+
+Key Takeaways:
+
+Database
+    ↓
+Organized collection of data
+
+DBMS
+    ↓
+Software that manages the database
+
+RDBMS
+    ↓
+DBMS based on relational tables
+
+SQL
+    ↓
+Language used to communicate with relational databases
+
+Primary Key
+    ↓
+Unique identifier
+
+Foreign Key
+    ↓
+Table connector
+
+Candidate Key
+    ↓
+Minimal unique identifier
+
+Super Key
+    ↓
+Unique identifier + possible extras
+
+Alternate Key
+    ↓
+Candidate that wasn't selected
+
+Composite Key
+    ↓
+Multiple columns together
+
+Cardinality
+    ↓
+Describes relationships between records
+
+NoSQL
+    ↓
+Flexible/non-relational database models
