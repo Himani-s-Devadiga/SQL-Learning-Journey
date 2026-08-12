@@ -1,0 +1,190 @@
+# SQL Revision — Command Categories & DDL
+
+## Part 1 — SQL Command Categories
+
+SQL commands are commonly grouped into:
+
+| Category | Purpose                 | Examples                              |
+| -------- | ----------------------- | ------------------------------------- |
+| **DDL**  | Define/modify structure | `CREATE`, `ALTER`, `DROP`, `TRUNCATE` |
+| **DML**  | Manipulate data         | `INSERT`, `UPDATE`, `DELETE`          |
+| **DQL**  | Retrieve data           | `SELECT`                              |
+| **DCL**  | Control permissions     | `GRANT`, `REVOKE`                     |
+| **TCL**  | Manage transactions     | `COMMIT`, `ROLLBACK`, `SAVEPOINT`     |
+
+### 🧠 Main Focus
+
+```text
+DDL → STRUCTURE 🏗️
+DML → DATA 📦
+DQL → RETRIEVE 🔍
+```
+
+### 🏠 House Analogy
+
+Think of a **database table as a house**.
+
+**DDL:**
+
+> How should this house be built?
+
+**DML:**
+
+> What things are inside the house?
+
+**DQL:**
+
+> Show me what's inside.
+
+---
+
+# Part 2 — DDL
+
+DDL = **Data Definition Language**
+
+DDL commands are used to **create, modify, and remove database structures**.
+
+The four important DDL commands are:
+
+```text
+CREATE → ALTER → TRUNCATE → DROP
+Build  → Change → Empty   → Destroy
+```
+
+---
+
+## 🏗️ 1. CREATE
+
+Creates a database object such as a database or table.
+
+### Create a database
+
+```sql
+CREATE DATABASE College;
+```
+
+### Create a table
+
+```sql
+CREATE TABLE Students (
+    ID INT,
+    Name VARCHAR(50),
+    Marks INT
+);
+```
+
+**Key idea:** `CREATE` defines the **structure**.
+
+---
+
+## 🔧 2. ALTER
+
+Changes the structure of an existing table.
+
+### Add a column
+
+```sql
+ALTER TABLE Students
+ADD Age INT;
+```
+
+### Drop a column
+
+```sql
+ALTER TABLE Students
+DROP COLUMN Age;
+```
+
+### Modify a column
+
+```sql
+ALTER TABLE Students
+MODIFY Name VARCHAR(100);
+```
+
+> **Note:** Column-modification syntax can vary between database systems.
+
+**Key idea:** `ALTER` = change the existing structure.
+
+---
+
+## 🧹 3. TRUNCATE
+
+Removes **all rows** from a table but keeps the table structure.
+
+```sql
+TRUNCATE TABLE Students;
+```
+
+### Before
+
+```text
+Students
+---------
+1  Asha
+2  Rahul
+3  Priya
+```
+
+### After
+
+```text
+Students
+---------
+(empty)
+```
+
+The table still exists.
+
+**House analogy:**
+
+```text
+🏠 → 🧹 → Empty house
+```
+
+---
+
+## 💣 4. DROP
+
+Completely removes the database object.
+
+```sql
+DROP TABLE Students;
+```
+
+The **table and its structure** are removed.
+
+**House analogy:**
+
+```text
+🏠 → 💥 → Gone
+```
+
+---
+
+# ⭐ DDL Quick Revision
+
+| Command    | What happens?                     | Memory      |
+| ---------- | --------------------------------- | ----------- |
+| `CREATE`   | Builds a new structure            | 🏗️ Build   |
+| `ALTER`    | Changes existing structure        | 🔧 Renovate |
+| `TRUNCATE` | Removes all rows, keeps structure | 🧹 Empty    |
+| `DROP`     | Removes the object and structure  | 💣 Destroy  |
+
+## 🧠 One-Line Memory
+
+> **CREATE → ALTER → TRUNCATE → DROP**
+> **Build → Renovate → Empty → Destroy**
+
+---
+
+## 📌 Revision Formula
+
+```text
+DDL
+│
+├── CREATE     → Build 🏗️
+├── ALTER      → Change 🔧
+├── TRUNCATE   → Empty 🧹
+└── DROP       → Destroy 💣
+```
