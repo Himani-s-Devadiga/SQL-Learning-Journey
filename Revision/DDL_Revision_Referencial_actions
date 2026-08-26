@@ -1,0 +1,80 @@
+-- =========================================
+-- SQL REFERENTIAL ACTIONS PRACTICE
+-- =========================================
+
+-- Parent Table
+CREATE TABLE departments(
+department_id INT PRIMARY KEY,
+department_name VARCHAR(50)
+);
+
+-- Child Table
+CREATE TABLE employees(
+employee_id INT PRIMARY KEY,
+employee_name VARCHAR(50),
+department_id INT
+);
+
+-- =========================================
+-- 1. ON DELETE CASCADE
+-- =========================================
+
+ALTER TABLE employees
+ADD CONSTRAINT order_fk 
+FOREIGN KEY (department_id) 
+REFERENCES departments(department_id)
+ON DELETE CASCADE;
+
+-- =========================================
+-- 2. ON UPDATE CASCADE
+-- =========================================
+
+-- To apply both actions to the same foreign key,
+-- recreate the constraint with both actions.
+
+ALTER TABLE employees
+DROP FOREIGN KEY order_fk;
+
+ALTER TABLE employees
+ADD CONSTRAINT order_fk
+FOREIGN KEY (department_id)
+REFERENCES departments(department_id)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+-- =========================================
+-- REFERENTIAL ACTIONS — NOTES
+-- =========================================
+
+Points to Remember:
+🟢 CASCADE → Automatically changes/deletes related child rows.
+🟢 RESTRICT → Prevents the parent change/delete if related child rows exist.
+🟢 SET NULL → Sets the child foreign-key value to NULL.
+🟢 SET DEFAULT → Sets the child foreign-key value to its default value (not supported in MySQL).
+
+-- =========================================
+-- SYNTAX REFERENCE
+-- =========================================
+
+-- CASCADE
+-- ON DELETE CASCADE
+-- ON UPDATE CASCADE
+
+-- RESTRICT
+-- ON DELETE RESTRICT
+-- ON UPDATE RESTRICT
+
+-- SET NULL
+-- ON DELETE SET NULL
+-- ON UPDATE SET NULL
+
+-- SET DEFAULT
+-- ON DELETE SET DEFAULT
+-- ON UPDATE SET DEFAULT
+-- (Not supported by MySQL)
+
+
+
+
+
+
