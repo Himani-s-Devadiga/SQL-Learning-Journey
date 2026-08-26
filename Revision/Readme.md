@@ -1,6 +1,17 @@
-### August 23, 2026 — SQL Constraints
+# 📚 SQL Revision & Practice
 
-- Data Integrity
+This folder contains my SQL revision notes and hands-on practice for **Data Science, placements, and technical interviews**.
+
+## 🟢 DDL — Data Definition Language
+
+- CREATE DATABASE
+- CREATE TABLE
+- ALTER TABLE
+- ADD / MODIFY / RENAME / DROP
+- Constraints
+- Referential Actions
+
+### Constraints Practiced
 - NOT NULL
 - UNIQUE
 - PRIMARY KEY
@@ -8,6 +19,62 @@
 - CHECK
 - DEFAULT
 - FOREIGN KEY
-- Practiced adding and removing constraints using ALTER TABLE
-- Practiced named constraints
-- Practiced relationships between tables using FOREIGN KEY
+- CASCADE
+- RESTRICT
+- SET NULL
+
+---
+
+## 🟢 DML — Data Manipulation Language
+
+- INSERT
+- UPDATE
+- DELETE
+- Conditional UPDATE & DELETE
+- Multiple-row INSERT
+- Mathematical UPDATE
+
+---
+
+## 🟢 DQL — Data Query Language
+
+### Operators
+- BETWEEN
+- AND
+- OR
+- IN
+- NOT IN
+- DISTINCT
+
+### Aggregate Functions
+- MAX()
+- MIN()
+- AVG()
+- SUM()
+- COUNT()
+- VARIANCE()
+- VAR_POP()
+- VAR_SAMP()
+
+### Mathematical Functions
+- ABS()
+- ROUND()
+- CEIL()
+
+### 🟡 Coming Next
+- SELECT
+- Aliases
+- Mathematical expressions
+- Data type conversion
+- CAST()
+- WHERE & advanced filtering
+
+---
+
+## 📈 Progress
+
+**DDL → Constraints → Referential Actions → DML → DQL**
+
+Learning through:
+
+**Learn → Practice → Correct → Repeat → GitHub 🚀**
