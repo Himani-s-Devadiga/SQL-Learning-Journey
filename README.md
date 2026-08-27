@@ -1,35 +1,44 @@
-# SQL-Learning-Journey
+# 🗄️ SQL Learning Journey
 
 Welcome to my SQL learning repository! 👋
 
-This repository documents my journey of learning SQL for **Data Science**, including theory, hands-on practice, coding exercises, and projects.
+This repository documents my journey of learning and practicing **SQL for Data Science and Analytics**, including theory, hands-on practice, coding challenges, revision, and real-world projects.
 
-## Repository Structure
+---
 
-### 📚 CampusX-Notes
+## 📂 Repository Structure
 
-Contains my SQL theory notes from the CampusX SQL course.
+### 📚 CampusX Notes
+
+Contains my SQL theory notes and learning materials from the CampusX SQL course.
 
 ### ⚡ SQLBolt
 
-Contains SQLBolt lesson solutions and progress.
+Contains solutions and progress from SQLBolt lessons.
 
 ### 💻 Practice
 
-Contains daily SQL practice files and query examples.
+Contains daily SQL practice files, queries, and concept-based exercises.
 
 ### 🏆 HackerRank
 
-Contains solutions to HackerRank SQL challenges.
----🔥 Earned 3 stars @Hackerank
+Contains solutions to SQL challenges solved on HackerRank.
+
+🔥 **Earned 3 Stars on HackerRank**
 
 ### 📊 Projects
 
 Contains SQL projects built using real-world datasets.
----🔥 Completed 2 Mini Projects
+
+🔥 **Completed 2 Mini Projects**
+
+### 🔄 Revision
+
+Contains revision files created while revisiting and strengthening SQL concepts.
+
 ---
 
-## Learning Roadmap
+## 🛣️ Learning Roadmap
 
 * SQL Fundamentals
 * DDL Commands
@@ -38,27 +47,48 @@ Contains SQL projects built using real-world datasets.
 * SQL Queries
 * Aggregate Functions
 * GROUP BY & HAVING
-* JOINS
+* JOINs
 * Subqueries
 * Window Functions
 * SQL Projects
 
 ---
 
-## Goal
+## 📈 Progress Tracker
 
-Build strong SQL skills for **Data Science**, **Analytics**, **Machine Learning**, and **Technical Interviews** while maintaining a well-organized GitHub portfolio.
+| Category               |        Progress |
+| ---------------------- | --------------: |
+| 📚 CampusX Notes       |         10 Days |
+| ⚡ SQLBolt Lessons      |     6 Completed |
+| 💻 Practice Files      |               9 |
+| 🏆 HackerRank Problems |       30 Solved |
+| ⭐ HackerRank Badge     |         3 Stars |
+| 📊 SQL Projects        | 2 Mini Projects |
+| 🔄 Revision Files      |               6 |
+| 🗄️ MySQL Server       |     ✅ Installed |
 
 ---
 
-⭐ This repository will continue to grow as I learn new SQL concepts and build projects.
+## 🎯 Goal
 
-## 📈 Progress Tracker
+My goal is to build strong SQL skills for:
 
-- CampusX Notes: 10 Days
-- SQLBolt Lessons Completed: 6
-- Practice Files: 9
-- HackerRank Problems Solved: 30
-- SQL Projects: 2
-- Revsion Files : 6
-- MySQL Server Installed: ✅
+* 📊 Data Analytics
+* 🤖 Data Science
+* 🧠 Machine Learning
+* 💼 Technical Interviews
+* 🚀 Placement Preparation
+
+I aim to strengthen my SQL fundamentals through consistent practice, problem solving, revision, and project-based learning.
+
+---
+
+## 📌 Current Focus
+
+Currently progressing through advanced SQL concepts, with **JOINs, Subqueries, Window Functions, and SQL Projects** as the next major milestones.
+
+---
+
+⭐ **This repository will continue to grow as I learn new SQL concepts, solve more problems, and build practical projects.**
+
+> **Learn → Practice → Build → Revise → Improve 🚀**
