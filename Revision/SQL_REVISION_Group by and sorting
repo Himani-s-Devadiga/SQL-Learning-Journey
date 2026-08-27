@@ -1,0 +1,68 @@
+
+Q1
+
+Display employees ordered by salary from lowest to highest.
+SELECT *
+FROM employees
+ORDER BY salary ASC;
+
+Q2
+
+Display employees ordered by salary from highest to lowest.
+SELECT *
+FROM employees
+ORDER BY salary DESC;
+
+Q3
+
+Display the number of employees in each department.
+SELECT COUNT(*),department
+FROM employees
+GROUP BY department;
+
+Q4
+
+Find the average salary of each department.
+SELECT department , AVG(salary)
+FROM employees
+GROUP BY department;
+
+Q5
+
+Find the maximum salary in each department.
+SELECT department, MAX(salary)
+FROM employees
+GROUP BY department;
+
+
+Q6
+
+Find the total salary for each department.
+SELECT department, SUM(salary)
+FROM employees
+GROUP BY department;
+
+Q7
+
+Show departments ordered by average salary from highest to lowest.
+SELECT department,AVG(salary) AS average
+FROM employees
+GROUP BY department
+ORDER BY average DESC;
+
+
+Q8 
+
+Find the average salary of each department, considering only employees whose salary is greater than 45000.
+SELECT department,AVG(salary)
+FROM employees
+WHERE salary > 45000
+GROUP BY department;
+
+Q9 
+
+Show only departments whose average salary is greater than 50000.
+SELECT AVG(salary)
+FROM employees
+GROUP BY department
+HAVING AVG(salary)>50000;
