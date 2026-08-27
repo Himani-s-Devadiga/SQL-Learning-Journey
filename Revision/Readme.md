@@ -61,14 +61,14 @@ This folder contains my SQL revision notes and hands-on practice for **Data Scie
 - ROUND()
 - CEIL()
 
-### 🟡 Coming Next
-- SELECT
-- Aliases
-- Mathematical expressions
-- Data type conversion
-- CAST()
-- WHERE & advanced filtering
-
+### Grouping & Sorting
+- ORDER BY
+- ASC / DESC
+- GROUP BY
+- WHERE + GROUP BY
+- HAVING
+- GROUP BY + ORDER BY
+- Aggregate functions with GROUP BY
 ---
 
 ## 📈 Progress
