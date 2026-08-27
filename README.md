@@ -21,12 +21,12 @@ Contains daily SQL practice files and query examples.
 ### 🏆 HackerRank
 
 Contains solutions to HackerRank SQL challenges.
-# 🔥 Earned 3 stars @Hackerank
+---🔥 Earned 3 stars @Hackerank
 
 ### 📊 Projects
 
 Contains SQL projects built using real-world datasets.
-# 🔥 Completed 2 Mini Projects
+---🔥 Completed 2 Mini Projects
 ---
 
 ## Learning Roadmap
