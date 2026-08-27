@@ -15,6 +15,16 @@ CREATE TABLE employees (
     salary DECIMAL(10,2)
 );
 
+## Basic use of Select
+
+SELECT employee_name, department, salary
+FROM employee;
+
+Display employee_name as Employee_Name,salary as Salary->Use AS
+
+SELECT employee_name AS Employee_Name,salary AS Salary 
+FROM employees;
+
 INSERT INTO employees
 VALUES
 (1, 'Himani', 'Data Science', 21, 50000),
