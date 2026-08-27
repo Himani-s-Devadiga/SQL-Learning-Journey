@@ -21,11 +21,12 @@ Contains daily SQL practice files and query examples.
 ### 🏆 HackerRank
 
 Contains solutions to HackerRank SQL challenges.
+🔥 Earned 3 stars @Hackerank
 
 ### 📊 Projects
 
 Contains SQL projects built using real-world datasets.
-
+- 🔥 Completed 2 Mini Projects
 ---
 
 ## Learning Roadmap
@@ -55,8 +56,9 @@ Build strong SQL skills for **Data Science**, **Analytics**, **Machine Learning*
 ## 📈 Progress Tracker
 
 - CampusX Notes: 10 Days
-- SQLBolt Lessons Completed: 5
-- Practice Files: 8
-- HackerRank Problems Solved: 19
-- SQL Projects: 1 
+- SQLBolt Lessons Completed: 6
+- Practice Files: 9
+- HackerRank Problems Solved: 30
+- SQL Projects: 2
+- Revsion Files : 6
 - MySQL Server Installed: ✅
