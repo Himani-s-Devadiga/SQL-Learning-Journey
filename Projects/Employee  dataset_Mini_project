@@ -1,0 +1,111 @@
+============================================
+          Employee dataset
+- Practice on Group by , Order By and Having
+============================================
+
+Q1
+Find the average salary and maximum salary for each department. Display only departments where the 
+average salary is greater than ₹50,000.
+
+SELECT department,AVG(salary),MAX(salary)
+FROM employees
+GROUP BY department
+HAVING AVG(salary)>50000;
+
+Q2
+Find the number of employees and average salary for each department. Sort the result by employee count 
+descending, and if the count is the same, sort by average salary descending.
+
+SELECT department,COUNT(*) AS employee_count,AVG(salary)
+FROM employees
+GROUP BY department
+ORDER BY employee_count DESC,AVG(salary) DESC;
+
+Q3
+Find departments where the difference between the highest and lowest salary is greater than ₹10,000.
+Hint: MAX(salary) - MIN(salary)
+
+SELECT department, MAX(salary)-MIN(salary) AS salary_difference
+FROM employees
+GROUP BY department
+HAVING MAX(salary) - MIN(salary) > 10000;
+
+Q4
+Find the total salary and average salary for each department, but consider only employees whose salary is above ₹50,000.
+Then sort departments by total salary from highest to lowest.
+
+SELECT department,SUM(salary)AS total_salary,AVG(salary)  AS average_salary
+FROM employees
+WHERE salary>50000
+GROUP BY department
+ORDER BY SUM(salary) DESC;
+
+Q5
+Find departments where:
+At least 2 employees work there
+Average salary is above ₹50,000
+
+SELECT department, AVG(salary) AS average_salary
+FROM employees
+GROUP BY department
+HAVING AVG(salary)>50000
+AND COUNT(*)>=2
+ORDER BY average_salary  DESC;
+
+Sort by average salary descending.
+
+Q6
+For each department, calculate:
+
+department
+employee_count
+total_salary
+average_salary
+Sort by total salary descending.
+
+SELECT department,COUNT(*) AS employee_count,SUM(salary) AS total_salary,AVG(salary) AS average_salary
+FROM employees
+GROUP BY department
+ORDER BY total_salary DESC;
+
+Q7 
+(Later)->Review⚠️ 
+Find the department with the second-highest average salary.
+Don't use LIMIT yet.
+SELECT department,second_highest,AVG(SALARY) as average_salary
+FROM employees
+HAVING COUNT( average_salary)-1 AS second_highest
+ORDER BY  average_salary DESC;
+
+
+Q8 
+Find departments where the highest salary is more than ₹60,000, and display:
+department
+highest_salary
+lowest_salary
+Sort by highest salary descending.
+
+SELECT department,
+MAX(salary) AS highest_salary,
+MIN(salary) AS lowest_salary
+FROM employees
+GROUP BY department
+HAVING highest_salary>60000
+ORDER BY highest_salary DESC;
+
+
+Q9 
+(Later)->Review⚠️ 
+Calculate the average salary by age group:
+age <= 23       → Young
+age 24–27       → Mid
+age > 27        → Senior
+Then find the average salary for each age group and sort from highest to lowest.
+This introduces CASE, so attempt it only if you're ready for one new concept.
+
+Q10 
+(Later)->Review⚠️ 
+Find the department with the highest total salary among departments having at least 2 employees.
+SELECT department , MAX(SUM(salary)) AS Total_highest_salary
+FROM employees
+HAVING COUNT(*)>=2;
