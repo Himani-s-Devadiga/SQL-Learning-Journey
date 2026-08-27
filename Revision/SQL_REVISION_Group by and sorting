@@ -1,3 +1,8 @@
+-- =========================================
+   SQL GROUP BY AND SORTING
+-- =========================================
+
+Practice Queries:
 
 Q1
 
@@ -66,3 +71,9 @@ SELECT AVG(salary)
 FROM employees
 GROUP BY department
 HAVING AVG(salary)>50000;
+
+
+-> Concepts learnt:
+   Group by
+   Order By
+   Having
