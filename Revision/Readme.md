@@ -79,12 +79,12 @@ JOINs Practiced
 - SELF JOIN — concept
 - CROSS JOIN — concept
 - JOIN fundamentals refreshed ✅
-##### Key Pattern
+#### Key Pattern
 FROM → JOIN → ON → WHERE → GROUP BY → HAVING → ORDER BY
 
 ## 📈 Progress
 
-**DDL → Constraints → Referential Actions → DML → DQL**
+**DDL → Constraints → Referential Actions → DML → DQL->DML->GROUP BY->ORDER BY->HAVING->JOINS**
 
 Learning through:
 
