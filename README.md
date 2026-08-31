@@ -64,7 +64,7 @@ Contains revision files created while revisiting and strengthening SQL concepts.
 | 🏆 HackerRank Problems |       30 Solved |
 | ⭐ HackerRank Badge     |         3 Stars |
 | 📊 SQL Projects        | 2 Mini Projects |
-| 🔄 Revision Files      |               6 |
+| 🔄 Revision Files      |               8 |
 | 🗄️ MySQL Server       |     ✅ Installed |
 
 ---
