@@ -1,0 +1,93 @@
+=====================================
+SQL JOIN Revision
+=====================================
+
+departments
+-------------
+department_id
+department_name
+
+employees
+-------------
+employee_id
+employee_name
+department_id
+salary
+
+1.Display each employee's name along with their department name
+SELECT department_name,employee_name
+FROM employees
+JOIN departments
+ON departments.department_id=employees.department_id;
+
+2.Display the names of employees who belong to the Data Science department.
+SELECT employee_name
+FROM employees AS e
+JOIN departments AS d
+ON e.department_id=d.department_id
+WHERE d.department_name='Data Science';
+
+3.Display ALL employees, including employees who don't have a matching department.
+SELECT e.employee_name,d.department_name
+FROM employees AS e
+LEFT JOIN departments AS d
+ON e.department_id=d.department_id;
+
+4.Find employees who do NOT belong to any department.
+SELECT employee_name
+FROM employees AS e 
+LEFT JOIN departments AS d
+ON e.department_id=d.department_id
+WHERE d.department_id IS NULL;
+
+5.Display employee name, department name, and salary. Sort employees by salary from highest to lowest.
+SELECT e.employee_name,d.department_name,e.salary
+FROM employees AS e
+JOIN departments AS d
+ON  e.department_id=d.department_id
+ORDER BY e.salary DESC;
+
+6.Display employees who belong to either Software or Data Science, ordered by salary from highest to lowest.
+SELECT e.employee_name
+FROM employees AS e
+JOIN departments AS d
+ON e.department_id=d.department_id
+WHERE d.department_name='software' OR d.department_name='Data Science'
+ORDER BY e.salary DESC;
+
+7.Find the number of employees in each department.
+SELECT d.department_name, COUNT(e.employee_name) AS emp_count
+FROM employees AS e
+JOIN departments AS d
+ON e.department_id=d.department_id
+GROUP BY d.department_name;
+
+8.Find the average salary of each department and sort departments by average salary from highest to lowest.
+SELECT  d.department_name,AVG(e.salary) AS average_salary 
+FROM employees AS e
+JOIN departments AS d
+ON e.department_id=d.department_id
+GROUP BY d.department_name
+ORDER BY average_salary DESC;
+
+9.Show only departments whose average employee salary is greater than ₹50,000.
+SELECT d.department_name, AVG(e.salary) AS average_employee_salary
+FROM employees AS e
+JOIN departments AS d
+ON e.department_id=d.department_id
+GROUP BY  d.department_name
+HAVING average_employee_salary>50000;
+
+10.Display department_name,employee_count,average_salary,highest_salary.Only departments with at least 2 employees.
+Sort by average salary DESC.
+SELECT d.department_name,COUNT(e.employee_name) AS 
+employee_count, AVG(e.salary) AS average_salary, MAX(e.salary) AS highest_salary
+FROM employees AS e
+JOIN departments as d
+ON e.department_id=d.department_id
+GROUP BY d.department_name
+HAVING employee_count>=2
+ORDER BY average_salary DESC;
+
+
+
