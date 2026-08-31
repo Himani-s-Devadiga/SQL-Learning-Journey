@@ -69,7 +69,18 @@ This folder contains my SQL revision notes and hands-on practice for **Data Scie
 - HAVING
 - GROUP BY + ORDER BY
 - Aggregate functions with GROUP BY
----
+
+### Joins 
+JOINs Practiced
+-  INNER JOIN
+- LEFT JOIN
+- RIGHT JOIN
+- FULL OUTER JOIN — concept
+- SELF JOIN — concept
+- CROSS JOIN — concept
+- JOIN fundamentals refreshed ✅
+# Key Pattern
+FROM → JOIN → ON → WHERE → GROUP BY → HAVING → ORDER BY
 
 ## 📈 Progress
 
