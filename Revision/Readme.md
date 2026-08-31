@@ -79,7 +79,7 @@ JOINs Practiced
 - SELF JOIN — concept
 - CROSS JOIN — concept
 - JOIN fundamentals refreshed ✅
-# Key Pattern
+##### Key Pattern
 FROM → JOIN → ON → WHERE → GROUP BY → HAVING → ORDER BY
 
 ## 📈 Progress
