@@ -85,7 +85,7 @@ I aim to strengthen my SQL fundamentals through consistent practice, problem sol
 
 ## 📌 Current Focus
 
-Currently progressing through advanced SQL concepts, with **JOINs, Subqueries, Window Functions, and SQL Projects** as the next major milestones.
+Currently progressing completed revision till Joins
 
 ---
 
