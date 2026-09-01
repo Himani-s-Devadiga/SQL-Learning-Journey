@@ -46,7 +46,7 @@ My objective is to build a strong foundation in SQL by consistently solving Hack
 
 ## 📈 Status
 
-- ⭐⭐ HackerRank SQL
+- ⭐⭐⭐ HackerRank SQL
 - Continuously updating this repository with new solutions.
 
 ---
