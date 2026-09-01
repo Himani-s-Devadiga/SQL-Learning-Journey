@@ -1,6 +1,6 @@
 ============================================
-           SUBQUERIES IN SQL
-           Date:1/9/2026
+SUBQUERIES IN SQL
+Date:1/9/2026
 =============================================
 
 # Independent Subqueries
