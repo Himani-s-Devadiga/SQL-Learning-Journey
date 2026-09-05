@@ -58,9 +58,9 @@ Contains revision files created while revisiting and strengthening SQL concepts.
 
 | Category               |        Progress |
 | ---------------------- | --------------: |
-| 📚 CampusX Notes       |         10 Days |
+| 📚 CampusX Notes       |         10  |
 | ⚡ SQLBolt Lessons      |     6 Completed |
-| 💻 Practice Files      |               9 |
+| 💻 Practice Files      |               11 |
 | 🏆 HackerRank Problems |       30 Solved |
 | ⭐ HackerRank Badge     |         3 Stars |
 | 📊 SQL Projects        | 2 Mini Projects |
@@ -85,7 +85,7 @@ I aim to strengthen my SQL fundamentals through consistent practice, problem sol
 
 ## 📌 Current Focus
 
-Currently progressing completed revision till Joins
+Currently progressing in subqueries(Day-2)
 
 ---
 
