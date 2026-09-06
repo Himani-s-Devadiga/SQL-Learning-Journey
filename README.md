@@ -5,6 +5,11 @@ Welcome to my SQL learning repository! 👋
 This repository documents my journey of learning and practicing **SQL for Data Science and Analytics**, including theory, hands-on practice, coding challenges, revision, and real-world projects.
 
 ---
+## 📌 Current Focus
+
+Currently progressing in subqueries(Day-3)
+
+---
 
 ## 📂 Repository Structure
 
@@ -80,12 +85,6 @@ My goal is to build strong SQL skills for:
 * 🚀 Placement Preparation
 
 I aim to strengthen my SQL fundamentals through consistent practice, problem solving, revision, and project-based learning.
-
----
-
-## 📌 Current Focus
-
-Currently progressing in subqueries(Day-2)
 
 ---
 
