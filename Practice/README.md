@@ -7,7 +7,7 @@ This folder contains my SQL practice queries and exercises.
 - CampusX SQL Course
 
 ## Current Focus
-Subqueries in SQL(Day-3)
+Nested Subqueries in SQL(Day-4)
 
 ### Progress
 - Completed
