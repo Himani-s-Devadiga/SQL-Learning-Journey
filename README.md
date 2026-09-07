@@ -7,7 +7,7 @@ This repository documents my journey of learning and practicing **SQL for Data S
 ---
 ## 📌 Current Focus
 
-Currently progressing in subqueries(Day-3)
+Currently progressing in Nested Subqueries in SQL(Day-4)
 
 ---
 
