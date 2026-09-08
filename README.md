@@ -7,7 +7,7 @@ This repository documents my journey of learning and practicing **SQL for Data S
 ---
 ## 📌 Current Focus
 
-Currently progressing in Nested Subqueries in SQL(Day-4)
+Currently progressing in Nested Subqueries in SQL(Day-5)
 
 ---
 
@@ -65,7 +65,7 @@ Contains revision files created while revisiting and strengthening SQL concepts.
 | ---------------------- | --------------: |
 | 📚 CampusX Notes       |         10  |
 | ⚡ SQLBolt Lessons      |     6 Completed |
-| 💻 Practice Files      |               11 |
+| 💻 Practice Files      |               14 |
 | 🏆 HackerRank Problems |       30 Solved |
 | ⭐ HackerRank Badge     |         3 Stars |
 | 📊 SQL Projects        | 2 Mini Projects |
