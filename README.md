@@ -65,7 +65,7 @@ Contains revision files created while revisiting and strengthening SQL concepts.
 | ---------------------- | --------------: |
 | 📚 CampusX Notes       |         10  |
 | ⚡ SQLBolt Lessons      |     6 Completed |
-| 💻 Practice Files      |               14 |
+| 💻 Practice Files      |               15|
 | 🏆 HackerRank Problems |       30 Solved |
 | ⭐ HackerRank Badge     |         3 Stars |
 | 📊 SQL Projects        | 2 Mini Projects |
