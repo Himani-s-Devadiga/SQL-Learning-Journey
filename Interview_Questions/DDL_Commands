@@ -1,0 +1,57 @@
+-----------------------------
+   DDL  Commands 
+------------------------------
+
+1.What is SQL? Explain its purpose.
+SQL (Structured Query Language) is a standard programming language used to communicate with and manage relational databases. 
+It is used to create database structures, store, retrieve, insert, update, delete and manipulate data efficiently.
+
+2.Explain the five categories of SQL commands with two examples each.
+Category	   Full form	                        Purpose                       	Two examples
+DDL    	Data Definition Language     	Defines or modifies database structure.	  CREATE, ALTER
+DML   	Data Manipulation Language  	Inserts, updates and deletes data.	      INSERT, UPDATE
+DQL   	Data Query Language         	Retrieves data from a database.	          SELECT (main command)
+DCL   	Data Control Language       	Controls database access and permissions.	GRANT, REVOKE
+TCL   	Transaction Control Language	Manages database transactions.	           COMMIT, ROLLBACK
+
+3.Differentiate between DDL and DML.
+     DDL	                                          DML
+Data Definition Language	              Data Manipulation Language
+Deals with database structure (schema).	Deals with data inside tables.
+CREATE, ALTER, DROP, TRUNCATE	          INSERT, UPDATE, DELETE
+Generally classified as DDL in MySQL.	  Classified as DML.
+
+Remember the difference:
+- DDL → Changes the structure of the table.
+- DML → Changes the records inside the table.
+
+4.What is the difference between DROP, DELETE and TRUNCATE?
+DROP: Removes the entire table, including its structure and data.
+DELETE: Removes specific rows or all rows from a table. It supports the WHERE clause.
+TRUNCATE: Removes all rows from a table while preserving its structure.
+
+5.What is data integrity? Explain its four types.
+Type	                   Purpose	                     Common mechanism
+Entity	        Uniquely identifies records	             PRIMARY KEY
+Referential	    Maintains relationships between tables	 FOREIGN KEY
+Domain	        Ensures valid column values           	 CHECK, data types
+User-defined	  Enforces business-specific rules	       Business rules / constraints
+
+6.What are constraints? Why are they important?
+Constraints are rules applied to columns or tables in a database to ensure the accuracy, validity, consistency and integrity of data.
+Why are they important?
+They help to:
+1. Prevent invalid data from being inserted.
+2. Avoid duplicate values.
+3. Ensure required fields are not left empty.
+4. Maintain relationships between tables.
+5. Maintain data integrity and consistency.
+
+7.Differentiate between NOT NULL and UNIQUE.
+NOT NULL-> NOT NULL is used to prevent the null values.
+UNIQUE -> is used to maintain unqiueness of the values and prevent duplicates.
+NOT NULL	                                         UNIQUE
+Prevents NULL values.	                     Prevents duplicate non-NULL values.
+Ensures a value must be provided.	         Ensures values are unique.
+Multiple different values are allowed.	   Duplicate values are not allowed.
+Example: Name NOT NULL	                   Example: Email UNIQUE
