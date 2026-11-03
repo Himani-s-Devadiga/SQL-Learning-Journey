@@ -4,9 +4,9 @@
 This folder contains my SQL interview preparation notes, concepts, and practical examples as part of my **SQL Learning Journey**.
 
 ## 📚 Topics Covered
-#  DDL Commands✅
+####  DDL Commands✅
 
-### 5. Interview Preparation
+## Interview Preparation
 - Conceptual Questions
 - SQL Syntax and Examples
 - Output Prediction
