@@ -1,0 +1,44 @@
+---------------------------------
+DDL Commands
+---------------------------------
+
+-- 1. Create database
+CREATE DATABASE companyDB;
+
+-- 2. Select database
+USE companyDB;
+
+-- 3. Create Employee table
+CREATE TABLE Employee (
+    Emp_ID INT PRIMARY KEY AUTO_INCREMENT,
+    Emp_Name VARCHAR(50) NOT NULL,
+    Email VARCHAR(100) UNIQUE,
+    Age INT,
+    Department VARCHAR(50)
+);
+
+-- 4. Insert records
+INSERT INTO Employee
+(Emp_Name, Email, Age, Department)
+VALUES
+('Himani', 'himani@gmail.com', 21, 'Data Science'),
+('Anu', 'anu@gmail.com', 22, 'HR'),
+('Riya', 'riya@gmail.com', 23, 'Analytics');
+
+-- 5. Display all records
+SELECT * FROM Employee;
+
+-- 6. Display selected columns
+SELECT Emp_Name, Department
+FROM Employee;
+
+-- 7. Delete employee with ID 2
+DELETE FROM Employee
+WHERE Emp_ID = 2;
+
+-- 8. Remove all records
+TRUNCATE TABLE Employee;
+
+-- 9. Remove table
+DROP TABLE Employee;
+```
