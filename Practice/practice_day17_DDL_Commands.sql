@@ -1,3 +1,7 @@
+-----------------------------
+DDL Commands
+-----------------------------     
+
 CREATE DATABASE companyDB;
 
 USE companyDB;
